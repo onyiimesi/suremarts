@@ -1,0 +1,561 @@
+<section class="image-carousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+
+                            <?php  
+                                $getPro = $admin->getSlider();
+
+                                for($i=1;$i<=count($getPro);$i++): ?>
+                                    <li data-bs-target="#carouselExampleFade" data-bs-slide-to="{{$i}}" class=""></li>
+                            <?php endfor; ?>
+                            
+                        </ol>
+                        <div class="carousel-inner">
+
+                            <?php 
+                                $getPro = $admin->getSlider();
+
+                                if($getPro){
+
+                                    $i = 0;
+                                    foreach($getPro as $slider) {  
+
+                                    ?> 
+                                        
+                                    <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>">
+                                        <img src="/admin/<?=$slider['slider_img'] ?>" class="img-fluid d-block w-100">
+                                        <div class="carousel-caption d-md-block">
+                                            <h5><?=$slider['slider_title'] ?></h5>
+                                            <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+                                        </div>
+                                    </div>
+
+                            <?php $i++; } } ?>
+
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host.example.com
+    ##DocumentRoot "C:/xampp/htdocs/dummy-host.example.com"
+    ##ServerName dummy-host.example.com
+    ##ServerAlias www.dummy-host.example.com
+    ##ErrorLog "logs/dummy-host.example.com-error.log"
+    ##CustomLog "logs/dummy-host.example.com-access.log" common
+</VirtualHost>
+
+##<VirtualHost *:80>
+    ##ServerAdmin webmaster@dummy-host2.example.com
+    ##DocumentRoot "C:/xampp/htdocs/dummy-host2.example.com"
+    ##ServerName dummy-host2.example.com
+    ##ErrorLog "logs/dummy-host2.example.com-error.log"
+    ##CustomLog "logs/dummy-host2.example.com-access.log" common
+##</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/ls"
+    ServerName ls.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/shop"
+    ServerName shop.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/nbcc"
+    ServerName nbcc.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/dct"
+    ServerName dctstores.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/hairline"
+    ServerName hairline.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/web"
+    ServerName web.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/laravel"
+    ServerName example-app.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/school"
+    ServerName school.com
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/eufxp"
+    ServerName eufxp.ng
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/bizad"
+    ServerName bizad.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/university"
+    ServerName university.ng
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/justnow"
+    ServerName justnow.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/revive"
+    ServerName revive.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/melenium"
+    ServerName melenium.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/pop"
+    ServerName pop.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/superpick"
+    ServerName superpick.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/onlinestore"
+    ServerName onlinestore.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/beststore"
+    ServerName beststore.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/teachers"
+    ServerName teachers.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/safelite"
+    ServerName safelite.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/safetronclassic"
+    ServerName safetronclassic.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/musknft"
+    ServerName musknft.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/shopwise"
+    ServerName shopwise.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/development/betking"
+    ServerName betking.web
+    
+    ErrorLog "logs/error.log"
+    CustomLog "logs/access.log" common
+
+    <Directory "C:/development/">
+	Options Indexes FollowSymLinks Includes ExecCGI
+	Require all granted
+	AllowOverride All
+    </Directory>
+</VirtualHost>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php  
+
+  //
+  //
+
+    // if (isset($_POST['pay'])) {
+
+
+    //     $amount = $_POST['amount'];
+
+
+
+    //     $sid = session_id();
+
+    //     $query = "SELECT * FROM cart LEFT JOIN sellers ON sellers.email = cart.user_email WHERE s_id = '$sid' ";
+    //     $getPro = $db->select($query);
+
+    //     if($getPro){
+
+    //       $code = array();
+    //       $totalprice = array();
+
+    //       foreach($getPro as $result){
+
+    //         $split_code = $result['split_code'];
+
+    //         $code[] = ($result['code']);
+
+    //         $price = $result['product_price'];
+    //         $percentToGet = $result['discount_price'];
+    //         $percentInDecimal = $percentToGet / 100;
+    //         $totalamount = $percentInDecimal * $price;
+
+    //         $totalprice[] = $price - $totalamount;
+            
+           
+            
+
+    //         // $url = "https://api.paystack.co/transaction/initialize";
+
+
+    //         // $fields = [
+    //         //   'email' => "onyedikachukwu62@gmail.com",
+    //         //   'amount' => $totalprice."00",
+    //         //   'split_code' => $split_code
+    //         // ];
+    //         // $fields_string = http_build_query($fields);
+    //         // //open connection
+    //         // $ch = curl_init();
+            
+    //         // //set the url, number of POST vars, POST data
+    //         // curl_setopt($ch,CURLOPT_URL, $url);
+    //         // curl_setopt($ch,CURLOPT_POST, true);
+    //         // curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+    //         // curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    //         //   "Authorization: Bearer sk_test_cc80fac6e46a9e8e8eed04c6e60536882869a6c8",
+    //         //   "Cache-Control: no-cache",
+    //         // ));
+            
+    //         // //So that curl_exec returns the contents of the cURL; rather than echoing it
+    //         // curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+            
+    //         // //execute post
+    //         // $result = curl_exec($ch);
+    //         // echo $result;
+
+    //         // $init = json_decode($result);
+
+    //         // $init_url = $init->data->authorization_url;
+
+    //         // if ($result) {
+    //         //   header("Location:".$init_url);
+    //         // }
+          
+    //       }
+
+    //     }
+        // print_r($totalprice);
+        // print_r($code);
+
+        
+
+        //     $curl = curl_init();
+        //     curl_setopt_array($curl, array(
+        //       CURLOPT_URL => 'https://api.paystack.co/transaction/initialize',
+        //       CURLOPT_RETURNTRANSFER => true,
+        //       CURLOPT_ENCODING => '',
+        //       CURLOPT_MAXREDIRS => 10,
+        //       CURLOPT_TIMEOUT => 30,
+        //       CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        //       CURLOPT_CUSTOMREQUEST => 'POST',
+        //       CURLOPT_POSTFIELDS => '{
+        //         "email": "onyedikachukwu62@gmail.com",
+        //         "amount": "'.$amount.'00'.'",
+        //         "split": {
+        //           "type": "flat",
+        //           "bearer_type": "all",
+
+        //           "subaccounts": [
+        //             {
+        //               "subaccount": "'.$code[0].'",
+        //               "share": "'.$totalprice[0].'00'.'"
+        //             }
+        //           ]
+        //         } 
+        //       }',
+        //       CURLOPT_HTTPHEADER => array(
+        //         'Content-Type: application/json',
+        //         'Authorization: Bearer sk_test_cc80fac6e46a9e8e8eed04c6e60536882869a6c8',
+        //         'Cache-Control: no-cache'
+        //       ),
+        //     ));
+        //     $response = curl_exec($curl);
+        //     $err = curl_error($curl);
+        //     curl_close($curl);
+
+        //     if ($err) {
+        //       echo "cURL Error #:" . $err;
+        //     } else {
+        //       echo $response;
+        //     }
+
+          
+        
+
+    // }
+
+  ?>

@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^(index|login|register|cart|product-detail|additional-info|order-details|payment-success|payment|seller|login|verify-account|customer|logout|view-orders|view-order-details|customer-details|customer-change-password|verify_transaction|search|about-us|contact-us|shop|privacy|terms|subcategory|travel|travel-agent|kwueton-services|arts-gallery|gallery)$ $1.php [NC,L]
+
+RewriteRule ^product-detail/(.*)$ product-detail.php?proid=$1 [QSA]
+
+RewriteRule ^seller/(.*)$ seller.php?info=$1 [QSA]
+
+RewriteRule ^cart/(.*)$ cart.php?delpro=$1 [QSA]
+
+RewriteRule ^payment-success/(.*)$ payment-success.php?status=$1 [QSA]
+
+RewriteRule ^view-order-details/(.*)$ view-order-details.php?order=$1 [QSA]
+
+RewriteRule ^search/(.*)$ search.php?search=$1 [QSA]
+
+RewriteRule ^category/(.*)$ category.php?cat=$1 [QSA]
+
+RewriteRule ^subcategory/(.*)$ subcategory.php?subcat=$1 [QSA]
+
+RewriteRule ^gallery/(.*)$ gallery.php?info=$1 [QSA]
+

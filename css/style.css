@@ -1,0 +1,2360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: 0.1em;
+}
+p{
+    color: #333 !important;
+}
+
+#popUp{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+}
+#pop{
+    width: 500px;
+    height: auto;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+#pop > .header{
+    color: #333;
+    font-size: 24px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+#pop > .body{
+    margin: 20px 0 0 0;
+    position: relative;
+    z-index: 99;
+}
+#pop > .body > p{
+    font-size: 16px;
+    position: relative;
+    z-index: 99;
+    color: #333 !important;
+}
+#pop .submitId{
+    width: 80px;
+    height: 40px;
+    border: none;
+    background: #ed1c24;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+#scrollToTopButton{
+  position: fixed;
+  bottom: 200px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  background: #16a9d6;
+  color: #fff;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 2px 4px 16px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: scale(0);
+  visibility: hidden;
+  transition: 1s;
+}
+#scrollToTopButton.show{
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+/*----------------------------*\
+	Header
+\*----------------------------*/
+
+header .top{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    /* box-shadow: -3px 4px 8px -5px rgba(0,0,0,0.1); */
+}
+header .logo{
+    padding: 10px 0;
+}
+header .logo span{
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.backg{
+    background: #f5f5f5;
+}
+
+.slider{
+    margin: 0 0 50px 0;
+}
+
+.slider .img_slide{
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.slider .img_slide img{
+    width: 100px;
+    height: 100px;
+    margin: 0 0 10px 0;
+    padding: 6px;
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+}
+.slider h6{
+    color: #000;
+    font-size: 14px;
+    
+}
+.slider .line{
+    width: 80px;
+    height: 2px;
+    background: #000;
+}
+
+.sliders{
+    padding: 10px 30px;
+}
+
+.sliders .slide_img{
+    margin: 0 10px 10px 0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sliders .slide_img img{
+    width: 100%;
+    height: 100%;
+    margin: 0 20px 0 0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sliders .slide_img::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #000;
+    opacity: .5;
+}
+
+
+/*----------------------------*\
+	Search
+\*----------------------------*/
+
+
+header .search {
+    margin: 0 0 0 70px;
+    padding: 15px 0px;
+    overflow: hidden;
+    float: right;
+}
+
+header .search form {
+    position: relative;
+}
+
+header .search form .input {
+    width: auto;
+    margin-right: -4px;
+    border-radius: 20px 0px 0px 20px;
+    outline: none;
+    border: 1px solid #16a9d6;
+    padding: 8px 15px;
+}
+
+header .search form .search-btn {
+    height: auto;
+    width: 60px;
+    background: #16a9d6;
+    color: #FFF;
+    font-weight: 700;
+    border: 1px solid #16a9d6;
+    border-radius: 0px 20px 20px 0px;
+    outline: none;
+    padding: 8px 15px;
+}
+
+.bg{
+    background: #ed1c24;
+}
+
+
+/*----------------------------*\
+	Navbar
+\*----------------------------*/
+
+header .nav{
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: -3px 4px 8px -5px rgba(0,0,0,0.1);
+}
+
+header .header-ctn{
+    float: right;
+    padding: 10px 0;
+    position: relative;
+}
+header .header-ctn>div {
+    display: inline-block;
+}
+  
+header .header-ctn>div+div {
+    margin-left: 0px;
+}
+  
+header .header-ctn>div>a {
+    display: block;
+    position: relative;
+    width: 90px;
+    text-align: center;
+    color: #000;
+}
+  
+header .header-ctn>div>a>i {
+    display: block;
+    font-size: 20px;
+}
+  
+header .header-ctn>div>a>span {
+    font-size: 12px;
+}
+  
+header .header-ctn>div>a>.qty {
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 10px;
+    color: #FFF;
+    background-color: #16a9d6;
+}
+.header-ctn .menu-toggle {
+    display: none;
+}
+
+.pt-100{
+    padding: 50px 0;
+}
+
+.button{
+    width: 100%;
+    padding: 8px 10px;
+    background: #ed1c24;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 6px;
+    transition: .5s;
+    font-size: 14px;
+}
+.button:hover{
+    background: #ed1c24;
+    opacity: .8;
+}
+
+
+
+.navbar{
+    width: 100%;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 8px 30px 0 0;
+    position: relative;
+}
+.navbar ul li a{
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.navbar>#responsive-nav>ul>li>a:hover, .navbar>#responsive-nav>ul>li>a:focus, .navbar>#responsive-nav>ul>li.active>a {
+    color: #16a9d6;
+    background-color: transparent;
+}
+.navbar>#responsive-nav>ul>li>a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #16a9d6;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+.navbar>#responsive-nav>ul>li>a:hover:after, .navbar>#responsive-nav>ul>li>a:focus:after, .navbar>#responsive-nav>ul>li.active>a:after {
+    width: 100%;
+}
+
+.navbar li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0; 
+}
+
+.navbar .sub-menu {
+    position: absolute;
+    list-style: none;
+    width: 150px;
+    left: 0;
+    top: 100%;
+    padding: 20px 0;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 50px;
+    background: #fff;
+    z-index: 99;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.05); 
+}
+.navbar .sub-menu li {
+    display: block; 
+}
+.navbar .sub-menu li a {
+    display: block;
+    color: #000;
+    margin-right: 0;
+    padding: 8px 20px; 
+    font-size: 14px;
+}
+.navbar .sub-menu li a:hover {
+    color: #16a9d6; 
+}
+
+/* .main-nav>li+li {
+    margin-left: 30px;
+  }
+
+.main-nav>li>a {
+  padding: 20px 0px;
+}
+
+
+
+.main-nav>li>a:after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #0102c7;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.main-nav>li>a:hover:after, .main-nav>li>a:focus:after, .main-nav>li.active>a:after {
+  width: 100%;
+} */
+
+.header-ctn li.nav-toggle {
+  display: none;
+}
+
+/*----------------------------*\
+	responsive nav
+\*----------------------------*/
+
+@media only screen and (max-width: 991px) {
+  .header-ctn .menu-toggle {
+    display: inline-block;   
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    right: 0;
+  }
+  #responsive-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #15161D;
+    height: 100vh;
+    max-width: 250px;
+    width: 0%;
+    overflow: hidden;
+    z-index: 22;
+    padding-top: 60px;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  #responsive-nav.active {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    width: 100%;
+  }
+  .navbar ul li{
+        display: block;
+        padding: 0 30px 0 0;
+        float: none;
+    }
+    .navbar ul li a{
+        color: #fff;
+        font-size: 14px;
+        padding: 15px;
+    }
+  /* .main-nav {
+    margin: 0px;
+    float: none;
+  }
+  .main-nav>li {
+    display: block;
+    float: none;
+  } */
+  .main-nav>li+li {
+    margin-left: 0px;
+  }
+  .main-nav>li>a {
+    padding: 15px;
+    color: #FFF;
+  }
+  header .header-ctn{
+    float: left;
+    padding: 10px 0;
+    position: relative;
+  }
+}
+
+
+
+
+.image-carousel{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px !important;
+}
+
+.carousel-item::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6); 
+}
+
+.carousel-item img{
+    border-radius: 8px !important;
+}
+
+.carousel-item h5{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.carousel-item h5,p{
+    position: relative;
+    z-index: 99;
+}
+
+
+
+/*----------------------------*\
+	Section Collection
+\*----------------------------*/
+
+.nav-link{
+    letter-spacing: 0.1em;
+}
+
+.collections{
+  padding: 80px 0;
+}
+.collections .line{
+    width: 80px;
+    height: 2px;
+    margin: 0 auto;
+    background: #000;
+}
+.collections .title h3{
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.collections .title p{
+  text-align: center;
+  font-size: 14px;
+}
+
+.collections .img{
+  margin: 10px 0;
+  
+}
+
+.collections .image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.collections .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.image{
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+/*.image:hover{
+  box-shadow: 2px 2px 5px rgba(100, 100, 50, 0.9);
+}*/
+.image .content-details {
+  text-align: center;
+  padding: 0 0 10px 0;
+  width: 100%;
+
+}
+.image .new-badge{
+    height: 25px;
+    background-color: #ed1c24;
+    padding: 0 10px;
+    display: inline-block;
+    line-height: 25px;
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    z-index: 10;
+}
+.image .new-badge span{
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
+}
+.image .content-title{
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 0 0 0;
+}
+.image .content-details .locator{
+    font-size: 12px;
+    color: #333;
+    padding: 0;
+}
+.image span{
+  color: #000;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 0 2px 0 0;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.image strike{
+  color: #000;
+  font-size: 12px;
+  border: none;
+  outline: none;
+}
+
+
+.collections .images{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.collections .images img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.images{
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.images .content-details {
+  text-align: center;
+  padding: 0 0 10px 0;
+  width: 100%;
+
+}
+.images .new-badge{
+    height: 25px;
+    background-color: #ed1c24;
+    padding: 0 10px;
+    display: inline-block;
+    line-height: 25px;
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    z-index: 10;
+}
+.images .new-badge span{
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
+}
+.images .content-title{
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 0 0 0;
+}
+.images .content-details .locator{
+    font-size: 12px;
+    color: #333;
+    padding: 0;
+}
+.images span{
+  color: #000;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 0 2px 0 0;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.images strike{
+  color: #000;
+  font-size: 12px;
+  border: none;
+  outline: none;
+}
+
+
+
+/* Breadcrumb  */
+.bread_crumb{
+    width: 100%;
+    height: 100%;
+    background: #16a9d6;
+    padding: 10px;
+}
+.bread_crumb .breadcrumb a{
+    color: #fff !important;
+}
+.bread_crumb .breadcrumb li{
+    color: #fff !important;
+}
+
+.product_detail{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+.product_detail .product_img{
+    border-radius: 8px;
+}
+.product_detail .product_img img{
+    border-radius: 8px;
+}
+
+/*.img_slide .slick-arrow:before {
+    font-size: 22px;
+    font-weight: 600;
+    color: #16a9d6;
+}*/
+.img_slide div{
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+}
+.img_slide div img{
+    border-radius: 5px;
+}
+
+.pro_desc{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+
+.pro_desc .title div{
+    width: 80px;
+    height: 2px;
+    background: #16a9d6;
+    margin: 0 auto;
+}
+
+.product_desc .button{
+    width: auto;
+    padding: 12px 15px;
+    background: #ed1c24;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 6px;
+    transition: .5s;
+    font-size: 14px;
+}
+.product_desc .button:hover{
+    background: #ed1c24;
+    opacity: .8;
+}
+
+.product_desc .dett a{
+    background: #16a9d6;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.product_desc .qty-label{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+.product_desc h3{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.product_desc .locator{
+    padding: 0;
+    font-size: 13px;
+    color: #16a9d6;
+    font-weight: 600;
+}
+
+
+
+.input-number {
+  position: relative;
+}
+
+.input-number input[type="number"]::-webkit-inner-spin-button, .input-number input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number input[type="number"] {
+  -moz-appearance: textfield;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  padding: 0px 35px 0px 15px;
+  outline: none !important;
+}
+
+.input-number .qty-up, .input-number .qty-down {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  padding: 0 !important;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input-number .qty-up {
+  right: 0;
+  top: 0;
+  border-bottom: 0px;
+}
+
+.input-number .qty-down {
+  right: 0;
+  bottom: 0;
+}
+
+.input-number .qty-up:hover, .input-number .qty-down:hover {
+  background-color: #E4E7ED;
+  color: #0102c7;
+}
+
+
+.other_txt div{
+    width: 80px;
+    height: 2px;
+    background: #16a9d6;
+    margin: 0 auto;
+}
+
+.other_products .others{
+    border-radius: 5px 5px 0 0;
+    margin: 0 0 30px 0;
+}
+.other_products .others img{
+    border-radius: 5px 5px 0 0;
+}
+
+.other_products .others h5{
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+.other_products .others .locator{
+  font-size: 12px;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+.other_products .others h6{
+    text-align: center;
+    padding: 10px 0 10px 0;
+    font-size: 14px;
+}
+
+
+
+.other_products a{
+    color: #333;
+}
+
+
+.cart .cart-items{
+    background: #f5f5f5;
+    padding: 20px 50px;
+    border-radius: 10px;
+
+}
+
+
+.information .contact_bg{
+    background: #f5f5f5;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.information .personal h4{
+    font-size: 20px;
+   
+}
+
+.information .personal p{
+    color: #333;
+   
+}
+.information .personal input{
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+}
+
+
+.login .contact_bg{
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.login .personal{
+    padding: 20px 30px;
+}
+
+.login .personal h4{
+    font-size: 20px;
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-weight: bold;
+}
+.login .personal input{
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+}
+
+
+
+.success .s_bg{
+    background: #ddd;
+    padding: 50px 10px;
+    border-radius: 20px;
+}
+.success .success_txt i{
+    font-size: 40px;
+    padding: 0 0 10px 0;
+    color: green;
+}
+.success .success_txt h3{
+    padding: 10px 0;
+}
+.success .success_txt p{
+    padding: 10px 0;
+}
+
+
+.seller .profile{
+    padding: 20px 15px;
+    border: 1px solid #333;
+}
+
+.seller .profile a{
+    color: #333;
+}
+.seller .profile a:hover{
+    color: green;
+}
+
+.seller .profile div{
+    border-bottom: 1px solid #333;
+    margin: 0 0 20px 0;
+}
+.seller .profile div h6{
+    font-weight: 600;
+}
+
+.bg_coll{
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+.bg_coll .txt div{
+    width: 100px;
+    height: 2px;
+    background: #000;
+    margin: 0 0 30px 0;
+}
+
+
+
+/* Customer  */
+.customer{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 20px 0;
+}
+.customer .customer_nav{
+    background: #fff;
+    border-radius: 5px;
+}
+.customer .customer_nav div ul{
+    margin: 0;
+    padding: 0;
+}
+.customer .customer_nav div ul li{
+    list-style: none;
+    padding: 0 0 20px 0;
+}
+.customer .customer_nav .first a.active{
+    width: 100%;
+    background: #16a9d6;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+}
+.customer .customer_nav .first{
+    border-bottom: 1px solid #f5f5f5;
+}
+.customer .customer_nav .first a{
+    width: 100%;
+    display: block;
+    padding: 20px 20px; 
+    color: #333;
+    font-size: 14px;
+}
+.customer .customer_nav .first a:hover{
+    background: #16a9d6;
+    opacity: .7;
+    color: #fff;
+}
+.customer .customer_nav .first a i{
+    padding: 0 15px 0 0;
+    font-size: 20px;
+}
+
+
+.customer .customer_nav .second{
+    border-bottom: 1px solid #f5f5f5;
+}
+.customer .customer_nav .second a{
+    width: 100%;
+    display: block;
+    padding: 15px 20px; 
+    color: #333;
+    font-size: 15px;
+
+}
+.customer .customer_nav .second a:hover{
+    background: #16a9d6;
+    opacity: .7;
+    color: #fff;
+}
+
+.customer .customer_nav .third{
+    padding: 20px 0;
+}
+
+.customer .customer_nav .third a{
+    padding: 15px 20px; 
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+.customer .customer_details{
+    background: #fff;
+    border-radius: 5px;
+}
+.customer .customer_details .over{
+    padding: 10px 15px;
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0;
+}
+.customer .customer_details .over h5{
+    font-size: 18px;
+}
+
+
+.customer .customer_details .details{
+    padding: 10px 15px;   
+}
+.customer .customer_details .details a{
+    color: #333;   
+}
+.customer .customer_details .details .box{
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.customer .customer_details .details .box .head{
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+.customer .customer_details .details .box .head h6{
+    font-size: 14px;
+    font-weight: 600;
+}
+.customer .customer_details .details .box div{
+    padding: 10px 20px;
+}
+
+
+
+.contact{
+    padding: 50px 0;
+}
+
+.contact .cont_txt h4{
+    font-size: 20px;
+}
+
+
+.contactsocial{
+    padding: 50px 0;
+    background: #16a9d6;
+}
+
+.contactsocial .soc ul{
+    margin: 0;
+    padding: 0;
+}
+
+.contactsocial .soc ul li{
+    font-size: 22px;
+    color: #fff;
+    padding: 0 10px 20px 0;
+}
+
+.contactsocial .soc ul li a{
+    font-size: 15px;
+    color: #fff;
+}
+.contactsocial .cont_txts div{
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+    background: #fff;
+}
+.contactsocial .cont_txts h4{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.ads{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #f5f5f5;
+    padding: 50px 0;
+}
+.ads .txt h5{
+    padding: 0 0 20px 0;
+}
+
+
+
+.ads .adverts{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+    
+}
+.ads .adverts img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.ads .service_render{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url('../img/bbb.jpg');
+    background-repeat: no-repeat;
+    padding: 50px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    transform: scale(1);
+}
+.ads .service_render::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.9);
+}
+.ads .service_render:hover{
+    -ms-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.ads .sss{
+    position: relative;
+    z-index: 99;
+    color: #fff;
+}
+.ads .sss i{
+    font-size: 50px;
+}
+.ads .sss h4{
+    font-size: 18px;
+}
+
+
+.topdeals{
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.topdeals .top_txt{
+    padding: 10px;
+    background: #16a9d6;
+    border-radius: 3px 3px 0 0;
+}
+.topdeals .top_txt h4{
+    font-size: 18px;
+    padding: 0;
+    color: #fff;
+}
+.topdeals .top_txt a{
+    font-size: 14px;
+    padding: 0;
+    color: #fff;
+}
+
+.topdeals .top_items{
+    margin: 15px 0 0 0;
+    padding: 0 10px;
+}
+
+.topdeals .image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.topdeals .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0; 
+  
+}
+.topdeals .locator{
+    font-size: 12px;
+    color: #333;
+}
+
+
+
+
+.shop{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 50px 0;
+    background: #f5f5f5;
+}
+.shop .shop_category{
+    background: #fff;
+    padding: 20px;
+}
+.shop .shop_category h4{
+    font-size: 18px;
+    padding: 0 0 0 0;
+}
+.shop .shop_category h6{
+    font-size: 14px;
+    padding: 0 0 6px 0;
+}
+.shop .shop_category a{
+    color: #333;
+}
+.shop .shop_category a:hover{
+    text-decoration: underline;
+}
+.shop .image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.shop .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  
+}
+.shop .image h4,span{
+  padding: 8px 5px;
+  
+}
+.sho{
+    background: #fff;
+    padding: 20px;
+}
+
+
+
+.about-us{
+    background: #fff;
+}
+
+
+.travelbanner{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../img/tra.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+    
+}
+.travelbanner:after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .5;
+}
+
+.travelbanners{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../img/service.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+    
+}
+.travelbanners:after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .5;
+}
+.travel_txt{
+    position: relative;
+    z-index: 1;
+}
+.travel_txt h3{
+    font-size: 40px;
+}
+.travel_txt p{
+    font-size: 15px;
+    padding: 0 0 20px 0;
+}
+
+
+.travel_txt h3, p{
+    color: #fff;
+}
+
+.travel_txt .buttons{
+    width: 100%;
+    padding: 15px 15px;
+    background: #ed1c24;
+    color: #fff;
+    border: 0;
+    outline: none;
+    transition: .5s;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.travel_txt .buttons:hover{
+    background: #16a9d6;
+    color: #000;
+}
+
+.traveloffer{
+    padding: 50px 0;
+}
+.traveloffer .offer_txt h3{
+    font-size: 40px;
+}
+.traveloffer .offer_txt div{
+    width: 80px;
+    height: 5px;
+    margin: 15px 0 0 0;
+    background: #16a9d6;
+}
+
+.traveloffer .offer_txts p{
+    font-size: 16px;
+}
+
+.traveloffer .offer_txts h3{
+    font-size: 38px;
+    padding: 0;
+}
+.traveloffer .offer_txts div{
+    width: 80px;
+    height: 5px;
+    margin: 10px 0 20px 0;
+    background: #16a9d6;
+}
+
+.traveloffer .offer_txts .social{
+    background: #16a9d6;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.traveloffer .offers i{
+    font-size: 40px;
+    color: #ed1c24;
+    padding: 15px 0;
+}
+
+.traveloffer .offers{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    padding: 15px 10px;
+}
+
+.traveloffer .offers:hover{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1.0);
+    cursor: pointer;
+}
+
+.traveloffer .offers h3{
+    padding: 10px 0 0 0;
+    font-size: 16px;
+}
+.traveloffer .bgg{
+    background: #000;
+}
+
+
+.traveloffer .agent_img{
+    margin: 50px 0 0 0;
+}
+.traveloffer .agent_img img{
+    border-radius: 5px;
+}
+
+
+
+.traveloffer .agent_txt h3{
+    color: #333;
+    padding: 100px 0 0 0;
+}
+.traveloffer .agent_txt p{
+    color: #333;
+    padding: 10px 0 20px 0;
+}
+
+.traveloffer .agent_txt span{
+    background: #ed1c24;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.traveloffer .agent_txt .buttons{
+    padding: 15px;
+    background: #16a9d6;
+    color: #fff;
+    font-size: 14px;
+    transition: .5s;
+    border-radius: 3px;
+}
+.traveloffer .agent_txt .buttons:hover{
+    background: #16a9d6;
+    opacity: .7;
+}
+
+.maintain{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../img/maintain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+    background-position: center;
+}
+.maintain:after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .8;
+}
+
+
+
+.sellers{
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.sellers .top_txt{
+    padding: 10px;
+    background: #16a9d6;
+    border-radius: 3px 3px 0 0;
+}
+.sellers .top_txt h4{
+    font-size: 18px;
+    padding: 0;
+    color: #fff;
+}
+.sellers .top_txt a{
+    font-size: 14px;
+    padding: 0;
+    color: #fff;
+}
+
+.sellers .top_items{
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+}
+
+.sellers .seller_img{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 30px;
+    position: relative;
+
+}
+
+.arts{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("../img/arts.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    position: relative;
+    background-position: center;
+}
+.arts:after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .8;
+}
+.arts_txt{
+    position: relative;
+    z-index: 1;
+}
+.arts_txt h3{
+    font-size: 40px;
+    color: #fff;
+}
+.arts_txt p{
+    font-size: 15px;
+    padding: 0;
+}
+
+.concept_art{
+    padding: 50px 0;
+}
+.concept_art .offer_txt h3{
+    font-size: 40px;
+}
+.concept_art .offer_txt div{
+    width: 80px;
+    height: 5px;
+    margin: 15px 0 0 0;
+    background: #16a9d6;
+}
+
+.concept_art .offer_txts p{
+    font-size: 16px;
+}
+
+.concept_art .offer_txts h3{
+    font-size: 38px;
+    padding: 0;
+}
+.concept_art .offer_txts div{
+    width: 80px;
+    height: 5px;
+    margin: 10px 0 20px 0;
+    background: #16a9d6;
+}
+.concept_art a{
+    color: #333;
+}
+
+.concept_art .offers{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.concept_art .offers:hover{
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1.0);
+    cursor: pointer;
+}
+
+.concept_art .offers h3{
+    padding: 20px 0 0 0;
+    font-size: 16px;
+}
+
+
+.gal:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.footer{
+  margin: 100px 0 0 0;
+}
+
+.footer .foot_nav{
+  margin: 15px 0;
+}
+.footer .foot_nav ul{
+  width: 100%;
+}
+.footer .foot_nav ul li{
+  display: inline-block;
+  margin: 0 8px;
+}
+.footer .foot_nav ul li a{
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.footer .copy p{
+  color: #000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+    header .logo{
+        margin: 0 auto;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: right;
+    }
+
+    .navbar ul li a{
+        font-size: 20px;
+    }
+
+    .carousel-caption h5{
+        font-size: 32px;
+    }
+
+    .slider h4{
+        font-size: 24px;
+    }
+
+    .image .content-title{
+      font-size: 15px;
+    }
+
+    .image .content-details .locator{
+        font-size: 13px;
+    }
+    .image span{
+      font-size: 16px;
+    }
+    .image strike{
+      font-size: 13px;
+    }
+
+    .travel_txt h3{
+        font-size: 50px;
+    }
+    .travel_txt p{
+        font-size: 24px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 50px;
+    }
+    .traveloffer .offers i{
+        font-size: 60px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 22px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 45px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 24px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 22px;
+    }
+
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: right;
+    }
+
+    .carousel-caption h5{
+        font-size: 32px;
+    }
+
+    .slider h4{
+        font-size: 24px;
+    }
+
+    .image .content-title{
+      font-size: 15px;
+    }
+
+    .image .content-details .locator{
+        font-size: 13px;
+    }
+    .image span{
+      font-size: 16px;
+    }
+    .image strike{
+      font-size: 13px;
+    }
+
+    .travel_txt h3{
+        font-size: 40px;
+    }
+    .travel_txt p{
+        font-size: 18px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 34px;
+    }
+    .traveloffer .offers i{
+        font-size: 40px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 18px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 26px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 16px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 15px;
+    }
+    
+
+}
+
+
+
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: none;
+    }
+
+    .carousel-caption h5{
+        font-size: 28px;
+    }
+
+    .slider h4{
+        font-size: 24px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 450px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 38px;
+    }
+    .travel_txt p{
+        font-size: 16px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 34px;
+    }
+    .traveloffer .offers i{
+        font-size: 34px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 16px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: none;
+    }
+
+    .carousel-caption h5{
+        font-size: 28px;
+    }
+
+    .slider h4{
+        font-size: 24px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 450px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 38px;
+    }
+    .travel_txt p{
+        font-size: 16px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 34px;
+    }
+    .traveloffer .offers i{
+        font-size: 34px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 16px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: none;
+    }
+
+    .carousel-caption h5{
+        font-size: 26px;
+    }
+
+    .slider h4{
+        font-size: 22px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 370px;
+        right: 0;
+    }
+    .travel_txt h3{
+        font-size: 32px;
+    }
+    .travel_txt p{
+        font-size: 17px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 32px;
+    }
+    .traveloffer .offers i{
+        font-size: 32px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 15px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 425px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: none;
+    }
+
+    .carousel-caption h5{
+        font-size: 22px;
+    }
+
+    .slider h4{
+        font-size: 20px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 320px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 32px;
+    }
+    .travel_txt p{
+        font-size: 17px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 32px;
+    }
+    .traveloffer .offers i{
+        font-size: 32px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 15px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        text-align: center;
+        margin: 0 auto;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: both !important;
+        float: none;
+    }
+
+    .carousel-caption h5{
+        font-size: 18px;
+    }
+
+    .slider h4{
+        font-size: 20px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 260px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 30px;
+    }
+    .travel_txt p{
+        font-size: 16px;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 30px;
+    }
+    .traveloffer .offers i{
+        font-size: 32px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 14px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 24px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 16px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 320px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        margin: 0 0 0 0px;
+        padding: 15px 0px;
+        overflow: hidden;
+    }
+
+    .carousel-caption h5{
+        font-size: 16px;
+    }
+
+    .slider h4{
+        font-size: 17px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 210px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 24px;
+    }
+    .travel_txt p{
+        font-size: 14px;
+        padding: 0 0 20px 0;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 24px;
+    }
+    .traveloffer .offers i{
+        font-size: 28px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 13px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 22px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+
+
+@media only screen and (min-width: 280px) and (max-width: 310px) {
+
+    header .logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header .search {
+        margin: 0 0 0 0px;
+        padding: 15px 0px;
+        overflow: hidden;
+        clear: all !important;
+    }
+
+    .carousel-caption h5{
+        font-size: 14px;
+    }
+
+    .slider h4{
+        font-size: 17px;
+    }
+
+    .header-ctn .menu-toggle {
+        display: inline-block;   
+        position: absolute;
+        top: 10px;
+        left: 210px;
+        right: 0;
+    }
+
+    .travel_txt h3{
+        font-size: 24px;
+    }
+    .travel_txt p{
+        font-size: 14px;
+        padding: 0 0 20px 0;
+    }
+    .traveloffer .offer_txt h3{
+        font-size: 24px;
+    }
+    .traveloffer .offers i{
+        font-size: 28px;
+    }
+
+    .traveloffer .offers h3{
+        font-size: 13px;
+    }
+
+    .traveloffer .agent_txt h3{
+        font-size: 22px;
+        padding: 50px 0 0 0;
+    }
+
+    .travel_txt .buttons{
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .traveloffer .agent_txt p{
+        font-size: 15px;
+    }
+    .traveloffer .agent_txt .buttons{
+        font-size: 14px;
+    }
+
+}
+

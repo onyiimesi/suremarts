@@ -1,0 +1,117 @@
+
+
+@media only screen and (max-width: 768px){
+	.sticky{
+		height: auto;
+		padding: 0% 5%;
+		top: 10px;
+	}
+	.site-wrapper img{
+		width: 50px;
+		height: 50px;
+	}
+	.navbar-nav li a{
+		font-size: 1em;
+		color: #fff !important;
+	}
+	.logo_s .k{
+		font-size: 1.3em !important;
+	}
+	nav .logo{
+		margin: 0 100px 0 0px;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	.title-text{
+		margin-left: 8%;
+		width: 80%;
+	}
+	.content .curcle{
+		margin-left: 35%;
+	}
+	.sticky{
+		height: auto;
+		padding: 2% 5%;
+		top: 20px;
+	}
+	.site-wrapper img{
+		width: 50px;
+		height: 50px;
+	}
+	.navbar-nav li a{
+		font-size: 1em;
+		color: #fff !important;
+	}
+	.logo_s .k{
+		font-size: 1.2em !important;
+	}
+	.logo img{
+		width: 50px;
+		height: 50px;
+	}
+	nav .logo{
+		margin: 0 0px 0 20px;
+	}
+	.site-title h2{
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	
+	.site-title h2{
+		font-size: 1.9em;
+	}
+	.logo img{
+		width: 50px;
+		height: 50px;
+	}
+	nav .logo{
+		margin: 0;
+		padding: 0;
+	}
+	.title-text{
+		margin-left: 2%;
+		width: 100%;
+	}
+	.content .curcle{
+		margin-left: 20%;
+	}
+	.site-wrapper img{
+		width: 50px;
+		height: 50px;
+	}
+	.navbar-nav li a{
+		font-size: 1em;
+		color: #fff !important;
+	}
+	.logo_s .k{
+		font-size: 1.1em !important;
+	}
+	.logos .k{
+		font-size: 1em !important;
+	}
+	nav .input-group input[type=text]{
+		width: 85px;
+	}
+	.carousel-item h2{
+		font-size: 24px;
+	}.carousel-item span{
+		font-size: 20px;
+	}
+	.button{
+		display: inline-block;
+	}
+	.btn-sub1{
+		margin: 0;
+		padding: 0.7em 1em;
+	}
+	.btn-sub2{
+		margin: 0;
+		padding: 0.7em 1em;
+	}
+	#contact span{
+		padding: 50px 0 50px 150px;
+	}
+}

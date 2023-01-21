@@ -1,0 +1,15 @@
+
+
+#services_k .services_k_courses-area .services_k_courses-content .slick-dots .slick-active {
+  background-color: #021691;
+}
+
+.services_k_course-single .services_k_course-img .services_k_course-imgcaption a:hover, .services_k_course-single .services_k_course-img .services_k_course-imgcaption a:focus {
+  color: #021691;
+}
+.services_k_course-single .services_k_course-single-content h4 a:hover, .services_k_course-single .services_k_course-single-content h4 a:focus {
+  color: #021691;
+}
+.services_k_course-single .services_k_course-single-content .services_k_course-single-contbottom .services_k_course-details {
+  color: #021691;
+}
